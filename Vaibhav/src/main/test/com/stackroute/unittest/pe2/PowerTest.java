@@ -41,9 +41,19 @@ public class PowerTest {
     }
 
     @Test
+    public void oneTest(){
+        input = 0;
+        expected = "1 is power of 4";
+
+        result = obj.powerCheck(input);
+        assertEquals(expected, result);
+    }
+
+
+    @Test
     public void trueTest(){
         input = 16;
-        expected = "16 is not power of 4";
+        expected = "16 is power of 4";
 
         result = obj.powerCheck(input);
         assertEquals(expected, result);
@@ -51,8 +61,8 @@ public class PowerTest {
 
     @Test
     public void falseTest(){
-        input = 16;
-        expected = "16 is not power of 4";
+        input = 20;
+        expected = "20 is not power of 4";
 
         result = obj.powerCheck(input);
         assertEquals(expected, result);
